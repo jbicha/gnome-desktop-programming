@@ -7,12 +7,16 @@ PDFTARGET := $(BUILDDIR)/$(NAME).pdf
 all: $(PDFTARGET)
 
 TEX_FILES :=
+TEX_FILES += book/arrays.tex
 TEX_FILES += book/commands.tex
+TEX_FILES += book/containers.tex
+TEX_FILES += book/datetime.tex
 TEX_FILES += book/fundamentals.tex
 TEX_FILES += book/gnome-desktop-programming.tex
 TEX_FILES += book/introduction.tex
 TEX_FILES += book/preamble.tex
 TEX_FILES += book/preface.tex
+TEX_FILES += book/strings.tex
 
 EXERCISE_FILES :=
 EXERCISE_FILES += exercise1.c
