@@ -16,3 +16,72 @@ concepts behind the choices. We will take note of designs and concepts have
 not served us well and learn from them.
 
 The next phase of our journey is one of preparation.
+
+
+\section{Preparing the System}
+
+To write software for a particular platform, such as GNOME, you need an SDK
+(Software Developers Kit). And SDK contains information about the platform. It
+typically includes a compiler, headers, and other associated files. A compiler
+is a program that takes source code, and translates it into a language that the
+computer knows. If it cannot understand it, it will not be able to translate it
+and the compiler will try to give us a hint as to what went wrong. “headers”
+contain information about the programs on our computer. It gives us insight
+into how the programs were written. When we want to make use of existing
+software on the system, we use that existing softwares "headers" to prime the
+compiler as to how it works. The compiler than then take we we told it along
+with what it learned from the headers to translate our program!
+
+
+\section{Installing the SDK}
+
+GNOME contains many pieces of software written by many different groups of
+people. We need a compiler, headers, and associated tools for building
+software. To get those, we will use our Linux distributions package manager to
+install the required components.
+
+It is important to be comfortable with a terminal for software development. A
+terminal is essential to the process of software development. So get those
+terminals going! I use gnome-terminal, but everyone has there favorite; xterm
+for example.
+
+We also need a text editor to use to write our code. Every programmer has their
+favorite. I, love using VIM in a terminal. Many C programmers love Emacs. And
+some GNOME programmers are perfectly happy in Gedit. For this book, I will
+assume you are using Gedit, because the VIM and Emacs users probably know their
+way around their editor just fine.
+
+
+\subsection{Fedora 17}
+
+\begin{Verbatim}
+    $ sudo yum install gtk3-devel clutter-devel \
+      gobject-introspection-devel webkitgtk3-devel \
+      glibc-devel make automake autoconf pkg-config gedit
+\end{Verbatim}
+
+
+\subsection{Ubuntu 12.04}
+
+\begin{Verbatim}
+    $ sudo apt-get install build-essential libgtk3.0-dev \
+      pkg-config gedit
+\end{Verbatim}
+
+
+\subsection{Arch Linux}
+
+TODO: Arch Linux install procedure.
+
+
+\subsection{Debian Wheezy}
+
+\begin{Verbatim}
+    $ sudo apt-get install build-essential libgtk3.0-dev \
+      pkg-config gedit
+\end{Verbatim}
+
+
+\section{Kicking the Tires}
+
+TODO: How to ensure system is setup correctly
