@@ -27,8 +27,11 @@ $(PDFTARGET): $(TEX_FILES) $(foreach var,$(EXERCISE_FILES),$(BUILDDIR)/$(var:.c=
 	@cp -a styles/*.sty $(BUILDDIR)
 	@echo "  [COPY]     tex"
 	@cp -a book/*.tex $(BUILDDIR)
+	@echo "  [TOC]      $(NAME)"
+	@TEXINPUTS=:$(BUILDDIR) $(PDFLATEX) -halt-on-error -output-directory $(BUILDDIR) -output-format pdf $(NAME).tex >/dev/null
 	@echo "  [PDFLATEX] $(NAME).pdf"
-	@$(PDFLATEX) -output-directory $(BUILDDIR) -output-format pdf $(BUILDDIR)/$(NAME).tex >/dev/null
+	@rm $(BUILDDIR)/$(NAME).pdf
+	@TEXINPUTS=:$(BUILDDIR) $(PDFLATEX) -halt-on-error -output-directory $(BUILDDIR) -output-format pdf $(NAME).tex >/dev/null
 
 view: $(PDFTARGET)
 	evince $(PDFTARGET)
