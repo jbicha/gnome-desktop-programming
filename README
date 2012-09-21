@@ -1,0 +1,17 @@
+------------------------------------------------------------------------------
+			   GNOME Desktop Programming
+------------------------------------------------------------------------------
+
+This repository contains the source for a book I am in the process of writing.
+It is targeted at those that want to become developers for the GNOME platform
+but are unsure of how to go about doing that.
+
+The target language is C, as that will get you the most distance for your
+effort. Eventually, other books could cover the same topics but for other
+programming languages.
+
+I intend for this book to evolve with the platform. I would like it to be a
+resource that could be shipped with a GNOME OS installation DVD someday.
+
+-- Christian
+
