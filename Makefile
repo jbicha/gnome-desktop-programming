@@ -29,6 +29,7 @@ TEX_FILES += book/strings.tex
 
 EXERCISE_FILES :=
 EXERCISE_FILES += exercise1.c
+EXERCISE_FILES += timet1.c
 
 $(BUILDDIR)/%.tex: exercises/%.c
 	@mkdir -p $(BUILDDIR)

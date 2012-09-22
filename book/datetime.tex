@@ -1,6 +1,22 @@
 \chapter{Dates and Times}
 
 \section{time\_t}
+
+If you've spent much time around technology oriented people, you've probably
+heard the term "UNIX time". This is what \ident{time\_t} is. \ident{time\_t}
+is a type for storing the number of seconds since Midnight, January 1, 1970.
+For example, January 1st, 2000 would have been \ident{946713600} using a
+\ident{time\_t}.
+
+To get an understanding of how this works, lets take a look at the example
+below. It shows how to print a formatted \ident{time\_t} in the current
+locales format.
+
+\begin{code}{timet1.c}
+\input{timet1}
+\end{code}
+
+
 \subsection{UTC vs Local time}
 
 \section{GTimeVal}
