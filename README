@@ -15,3 +15,11 @@ resource that could be shipped with a GNOME OS installation DVD someday.
 
 -- Christian
 
+------------------------------------------------------------------------------
+ Building The Book
+------------------------------------------------------------------------------
+
+You will need the "pdflatex" binary in your path. Sometimes, this is in a
+"tex-live" package. You will also need the pygments python package installed.
+If your system does not have it packaged, try "easy_install pygments".
+
