@@ -85,3 +85,15 @@ TODO: Arch Linux install procedure.
 \section{Kicking the Tires}
 
 TODO: How to ensure system is setup correctly
+
+\begin{Verbatim}
+    $ pkg-config --modversion gobject-2.0
+    2.33.14
+
+    $ pkg-config --modversion gtk+-3.0
+    3.5.18
+\end{Verbatim}
+
+If the above commands give you an error about the package not being found,
+then you still need to install the development (dev) packages for the given
+libraries.
