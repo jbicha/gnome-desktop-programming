@@ -10,6 +10,7 @@ TEX_FILES :=
 TEX_FILES += book/arrays.tex
 TEX_FILES += book/bitarray.tex
 TEX_FILES += book/commands.tex
+TEX_FILES += book/conditionals.tex
 TEX_FILES += book/datetime.tex
 TEX_FILES += book/debugging.tex
 TEX_FILES += book/directory.tex
