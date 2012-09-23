@@ -7,6 +7,7 @@ PDFTARGET := $(BUILDDIR)/$(NAME).pdf
 all: $(PDFTARGET)
 
 TEX_FILES :=
+TEX_FILES += book/advancedstrings.tex
 TEX_FILES += book/arrays.tex
 TEX_FILES += book/bitarray.tex
 TEX_FILES += book/commands.tex
