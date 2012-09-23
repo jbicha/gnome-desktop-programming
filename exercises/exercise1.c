@@ -1,3 +1,4 @@
+#include <glib.h>
 #include <stdio.h>
 
 gint
@@ -6,9 +7,9 @@ main (gint   argc,
 {
     gint age;
 
-    printf ("How old are you?  ");
+    g_print ("How old are you?  ");
     scanf ("%d", &age);
-    printf ("In three years you will be %d\n", age + 3);
+    g_print ("In three years you will be %d\n", age + 3);
 
     return 0;
 }
