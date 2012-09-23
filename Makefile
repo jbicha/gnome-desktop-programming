@@ -27,16 +27,20 @@ TEX_FILES += book/preamble.tex
 TEX_FILES += book/preface.tex
 TEX_FILES += book/strings.tex
 
-EXERCISE_FILES :=
-EXERCISE_FILES += exercise1.c
-EXERCISE_FILES += timet1.c
+FIGURE_FILES :=
+FIGURE_FILES += fundamentals1.c
+FIGURE_FILES += dateandtime1.c
 
-$(BUILDDIR)/%.tex: exercises/%.c
+$(BUILDDIR)/%.tex: figures/%.c
 	@mkdir -p $(BUILDDIR)
 	@echo "  [FORMAT]   $*"
-	@./exercises/formatter.py exercises/$*.c $(BUILDDIR)/$*.tex
+	@./scripts/formatter.py figures/$*.c $(BUILDDIR)/$*.tex
 
-$(PDFTARGET): $(TEX_FILES) $(foreach var,$(EXERCISE_FILES),$(BUILDDIR)/$(var:.c=.tex))
+TEX_DEPS :=
+TEX_DEPS += $(TEX_FILES)
+TEX_DEPS += $(foreach var,$(FIGURE_FILES),$(BUILDDIR)/$(var:.c=.tex))
+
+$(PDFTARGET): $(TEX_DEPS)
 	@mkdir -p $(BUILDDIR)
 	@echo "  [COPY]     styles"
 	@cp -a styles/*.sty $(BUILDDIR)
@@ -52,5 +56,5 @@ view: $(PDFTARGET)
 	evince $(PDFTARGET)
 
 clean:
-	@echo "  [CLEAN]"
+	@echo "  [CLEAN]    build"
 	@rm -rf $(BUILDDIR)
