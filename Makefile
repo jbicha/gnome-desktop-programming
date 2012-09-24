@@ -42,6 +42,7 @@ TEX_FILES += book/packing.tex
 TEX_FILES += book/pointers.tex
 TEX_FILES += book/preamble.tex
 TEX_FILES += book/preface.tex
+TEX_FILES += book/refcounting.tex
 TEX_FILES += book/scope.tex
 TEX_FILES += book/stackandheap.tex
 TEX_FILES += book/strings.tex
