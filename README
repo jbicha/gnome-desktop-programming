@@ -24,6 +24,9 @@ You will need the "pdflatex" binary in your path. Sometimes, this is in a
 "tex-live" package. You will also need the pygments python package installed.
 If your system does not have it packaged, try "easy_install pygments".
 
+If you are using Fedora, "yum install texlive-latex python-pygments" should
+do the trick.
+
 
 ------------------------------------------------------------------------------
  Contributing to the Book
