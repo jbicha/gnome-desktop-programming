@@ -51,14 +51,24 @@ FIGURE_FILES :=
 FIGURE_FILES += fundamentals1.c
 FIGURE_FILES += dateandtime1.c
 
+
+EXERCISE_FILES :=
+EXERCISE_FILES += exercise1.c
+
 $(BUILDDIR)/%.tex: figures/%.c
 	@mkdir -p $(BUILDDIR)
 	@echo "  [FORMAT]   $*"
 	@./scripts/formatter.py figures/$*.c $(BUILDDIR)/$*.tex
 
+$(BUILDDIR)/exercise%.tex: exercises/exercise%.c
+	@mkdir -p $(BUILDDIR)
+	@echo "  [FORMAT]   exercise$*"
+	@./scripts/formatter.py exercises/exercise$*.c $(BUILDDIR)/exercise$*.tex
+
 TEX_DEPS :=
 TEX_DEPS += $(TEX_FILES)
 TEX_DEPS += $(foreach var,$(FIGURE_FILES),$(BUILDDIR)/$(var:.c=.tex))
+TEX_DEPS += $(foreach var,$(EXERCISE_FILES),$(BUILDDIR)/$(var:.c=.tex))
 
 $(PDFTARGET): $(TEX_DEPS)
 	@mkdir -p $(BUILDDIR)

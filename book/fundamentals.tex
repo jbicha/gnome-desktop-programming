@@ -44,3 +44,31 @@ TODO: explain the order of operations.
 \section{Binary Counting}
 
 \section{Types}
+
+
+\section{Student Exercises}
+
+Complete the following exercises. Each exercise is designed to enforce the
+lessons described in this chapter.
+
+\subsection{Exercise 1}
+
+Complete the following source code to calculate how old the user will be this
+year based on the year they were born. Use the constant \ident{THIS\_YEAR} in
+the arithmetic and store the result in \ident{now}.
+
+The code can be compiled with the following command in your terminal.
+
+\begin{Verbatim}
+    $ gcc -o exercise1 exercise1.c $(pkg-config --cflags --libs glib-2.0)
+\end{Verbatim}
+
+To test your program, you can run it with the following command.
+
+\begin{Verbatim}
+    $ ./exercise1
+\end{Verbatim}
+
+\begin{code}{exercise1.c}
+\input{exercise1}
+\end{code}
