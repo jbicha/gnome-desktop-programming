@@ -8,6 +8,7 @@ all: $(PDFTARGET)
 
 TEX_FILES :=
 TEX_FILES += book/advancedstrings.tex
+TEX_FILES += book/autotools.tex
 TEX_FILES += book/arrays.tex
 TEX_FILES += book/bitarray.tex
 TEX_FILES += book/commands.tex
@@ -22,6 +23,7 @@ TEX_FILES += book/fundamentals.tex
 TEX_FILES += book/garray.tex
 TEX_FILES += book/gdata.tex
 TEX_FILES += book/ghashtable.tex
+TEX_FILES += book/git.tex
 TEX_FILES += book/glist.tex
 TEX_FILES += book/gmainloop.tex
 TEX_FILES += book/gmodule.tex
@@ -31,6 +33,7 @@ TEX_FILES += book/gqueue.tex
 TEX_FILES += book/gtkdoc.tex
 TEX_FILES += book/gtree.tex
 TEX_FILES += book/introduction.tex
+TEX_FILES += book/jhbuild.tex
 TEX_FILES += book/libraries.tex
 TEX_FILES += book/memory.tex
 TEX_FILES += book/oointro.tex
