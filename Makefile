@@ -54,6 +54,7 @@ FIGURE_FILES += dateandtime1.c
 
 EXERCISE_FILES :=
 EXERCISE_FILES += exercise1.c
+EXERCISE_FILES += exercise2.c
 
 $(BUILDDIR)/%.tex: figures/%.c
 	@mkdir -p $(BUILDDIR)
