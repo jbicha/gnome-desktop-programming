@@ -1,6 +1,5 @@
-------------------------------------------------------------------------------
-			   GNOME Desktop Programming
-------------------------------------------------------------------------------
+GNOME Desktop Programming
+=========================
 
 This repository contains the source for a book I am in the process of writing.
 It is targeted at those that want to become developers for the GNOME platform
@@ -15,22 +14,18 @@ resource that could be shipped with a GNOME OS installation DVD someday.
 
 -- Christian
 
-
-------------------------------------------------------------------------------
- Building the Book
-------------------------------------------------------------------------------
+Building the Book
+-----------------
 
 You will need the "pdflatex" binary in your path. Sometimes, this is in a
 "tex-live" package. You will also need the pygments python package installed.
-If your system does not have it packaged, try "easy_install pygments".
+If your system does not have it packaged, try `easy_install pygments`.
 
-If you are using Fedora, "yum install texlive-latex python-pygments" should
+If you are using Fedora, `yum install texlive-latex python-pygments` should
 do the trick.
 
-
-------------------------------------------------------------------------------
- Contributing to the Book
-------------------------------------------------------------------------------
+Contributing to the Book
+------------------------
 
 The outline of the book is an ever work-in-progress. However, if there is a
 topic in the book that you think you have a good grasp of, go ahead and fork
