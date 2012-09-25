@@ -15,6 +15,36 @@ some C code and familiarizing ourselves with its anatomy.
 \input{fundamentals1}
 \end{code}
 
+TODO
+\begin{enumerate}
+\item \verb|#include <glib.h>|
+\item \verb|gint|
+\item \verb|(gint argc, gchar *argv[])|
+\item \verb|{|
+\item \verb|    gint age;|
+\item \verb|    return 0;|
+\item \verb|}|
+\end{enumerate}
+
+TODO: The whole following is not easy to understand or deduce, but it
+starts covering the sections, which can be elaborated on.
+
+Lets look at the first line: \verb|#include <glib.h>|. This line includes
+the \ident{header} \verb|glib.h|. A \ident{header} is a file that describes
+various components of C code. \verb|glib.h|, in particular, describes many
+of the core components we will use on the GNOME desktop.
+
+TODO: More info on headers. Maybe we should save it for later?
+
+The next line of code: \verb|gint| contains the \ident{return type} for the
+function called main.
+
+Following the type we have \verb|main|, the name of the function that is
+called when the program starts.
+
+TODO: what does "calling a function" even mean at this point?
+
+
 
 TODO: Lots of explaination on the anatomy of figure 1.
 
