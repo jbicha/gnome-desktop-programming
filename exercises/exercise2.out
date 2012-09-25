@@ -1,0 +1,9 @@
+\begin{Verbatim}
+$ gcc -o exercise2 exercise2.c $(pkg-config --cflags --libs glib-2.0)
+$ ./exercise2
+1
+1.111111111
+1.492537313
+2.857142857
+4.761904762
+\end{Verbatim}

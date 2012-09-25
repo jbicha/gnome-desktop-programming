@@ -78,6 +78,8 @@ $(PDFTARGET): $(TEX_DEPS)
 	@cp -a styles/*.sty $(BUILDDIR)
 	@echo "  [COPY]     tex"
 	@cp -a book/*.tex $(BUILDDIR)
+	@echo "  [COPY]     out"
+	@cp -a exercises/*.out $(BUILDDIR)
 	@echo "  [TOC]      $(NAME)"
 	@TEXINPUTS=:$(BUILDDIR) $(PDFLATEX) -halt-on-error -output-directory $(BUILDDIR) -output-format pdf $(NAME).tex >/dev/null
 	@echo "  [PDFLATEX] $(NAME).pdf"

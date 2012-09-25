@@ -1,0 +1,6 @@
+\begin{Verbatim}
+$ gcc -o exercise1 exercise1.c $(pkg-config --cflags --libs glib-2.0)
+$ ./exercise1
+What year were you born?  1984
+This year, you are 28.
+\end{Verbatim}

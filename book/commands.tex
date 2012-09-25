@@ -18,19 +18,20 @@
 }
 { \end{quote} \end{note} }
 
+
 \newenvironment{Terminal}[1]
 {
-    \begin{source}
-    \caption{\hfill\it #1}
-    \sffamily\small
+    {\hfill\it\large #1}
+    \rule{\textwidth}{0.1pt}
+    \tt
+    \sffamily\footnotesize
 }
-{\end{source}}
 
 \newenvironment{code}[1]
 {
     \begin{source}
     \caption{\hfill\it #1}
-    \sffamily\small
+    \sffamily\footnotesize
 }
 {\end{source}}
 
