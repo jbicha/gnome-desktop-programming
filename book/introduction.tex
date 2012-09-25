@@ -9,8 +9,8 @@ it is today, only explaining ancient portions when it provides a better
 understanding of the now.
 
 This book covers the C programming languages, from the very basics to advanced
-concepts. But more than that, it is a companion for your journey in Linux and
-the GNOME Desktop. Once we have a grasp of the language we will learn the
+concepts. More than that, it is a companion for your journey in Linux and the
+GNOME Desktop. Once we have a grasp of the language we will learn the
 components available to us and how to use them effectively. We will cover the
 concepts behind the choices. We will take note of designs and concepts have
 not served us well and learn from them.
@@ -66,7 +66,7 @@ terminals going! I use gnome-terminal, but everyone has there favorite; xterm
 for example.
 
 We also need a text editor to use to write our code. Every programmer has their
-favorite. I, love using VIM in a terminal. Many C programmers love Emacs. And
+favorite. I love using VIM in a terminal. Many C programmers love Emacs. And
 some GNOME programmers are perfectly happy in Gedit. For this book, I will
 assume you are using Gedit, because the VIM and Emacs users probably know their
 way around their editor just fine.
@@ -104,11 +104,11 @@ way around their editor just fine.
 
 \section{Kicking the Tires}
 
-Let's double-check that we got everything installed propertly so we don't have
-an unexpected problems later as we perform the exercises in this book.  We will
-use the \ident{pkg-config} program to check what versions of programs we just
-installed. \ident{pkg-config} is a program that tells us information about
-various components of our installed SDK.
+Let's double-check that everything has been installed properly so that 
+unexpected problems don't surface when we perform the exercises in this book.
+We will use the \ident{pkg-config} program to check what versions of programs
+we've just installed. \ident{pkg-config} is a program that tells us information
+about various components of our installed SDK.
 
 \begin{Verbatim}
     $ pkg-config --modversion gobject-2.0
@@ -118,6 +118,5 @@ various components of our installed SDK.
     3.5.18
 \end{Verbatim}
 
-If the above commands give you an error about the package not being found, then
-you still need to install the development (-dev) packages for the given
-libraries.
+If the above commands give you errors about missing packages, then you still
+need to install the development (-dev) packages for the given libraries.
