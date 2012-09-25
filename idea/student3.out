@@ -1,0 +1,5 @@
+Please enter two numbers separated by a space to be divided:  123.123 4351.12
+123.123000 / 4351.120000 = 0.028297
+
+Please enter two numbers separated by a space to be divided:  123.4234 0  
+Cannot divide by zero!
