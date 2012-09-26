@@ -1,7 +1,7 @@
 \chapter{Chapter 1}
 
 The C programming language often seems complex and mysterious to those who have
-not yet learned it. We have all heard the horror stories of how difficult
+not yet been emersed. We have all heard the horror stories of how difficult
 pointers can be. While it is indeed a difficult subject, it is perfectly within
 your reach.
 
@@ -9,13 +9,13 @@ The focus of this chapter is to familiarize yourself with the very basics of
 the language. You will write your first C program as we reason how to express
 ourselves in this unfamiliar place.
 
-Occasionally, we will gloss over some of the details so that we can broaden
-our understanding. Therefore, future chapters may feel repetitious as we
-reinforce previous teachings in the light of new understanding.
+Occasionally, we will gloss over a few details so that we can broaden our
+understanding. Future chapters may feel repetitious as we reinforce previous
+teachings in the light of new understanding.
 
-Lets take a quick look at the stereotypical first program in any language. The
-venerable "hello, world" exercise. Create a new text file with the following C
-code and save it as \file{hello.c}.
+Lets take a quick look at the stereotypical first program. The venerable
+"hello, world" exercise. Create a new text file with the following C code and
+save it as \file{hello.c}.
 
 \begin{Verbatim}
 #include <stdio.h>
@@ -26,8 +26,8 @@ void main ()
 }
 \end{Verbatim}
 
-Navigate using your terminal to the directory where you saved the file. Type
-in the following command to compile the program into executable code that the
+Navigate using your terminal to the directory where you saved the file. Type in
+the following command. It will compile the program into a format that the
 computer knows how to execute.
 
 \begin{Verbatim}
@@ -36,11 +36,11 @@ gcc hello.c
 
 If everything worked, the \ident{gcc} command will exit silently and a new
 executable file \file{a.out} will be found in your current directory. If there
-was an error, carefully check that each character matches the C code above and
-try again.
+was an error, carefully check that each character in \file{hello.c} matches the
+C code above and try again.
 
 We can execute the program from the terminal by prefixing \verb|./| to the
-filename to tell it to execute a file within the current directory.
+filename to tell the terminal to execute a file within the current directory.
 
 \begin{Verbatim}
 ./a.out
@@ -49,12 +49,12 @@ Hello, World!
 
 There you have it, your very first C program!
 
-Lets now analyze the anatomy of this simple first C program. The very first
-line, \verb|#include <stdio.h>| tells the compiler that we would like to use
-the \ident{stdio} library. A library is a set of useful, reusable routines. In
-this case, the \ident{stdio} library contains routines for interfacing with
-standard input and output. See \verb|man stdio| for more information on
-\ident{stdio}.
+Lets now analyze the anatomy of this simple C program. The very first line,
+\verb|#include <stdio.h>| tells the compiler that we would like to use the
+\ident{stdio} library. A library is a set of useful, reusable routines. In this
+case, the \ident{stdio} library contains routines for interfacing with standard
+input and output. Run \verb|man stdio| in your terminal for more information on
+the \ident{stdio} library.
 
 The line following our include is simply an empty line. Empty lines do not
 effect the program. In some languages, this does matter. However, C is not one
@@ -79,16 +79,16 @@ function (part of the \ident{stdio} library). You can tell it is a function
 call because the function name is followed by a parenthesized argument list.
 In this case, our function call has a single argument,
 \verb|"Hello, World!\n"|. Information can be shared between functions in
-a couple different ways, but this way, through the argument list, is the
-most common.
+a couple different ways. This way, through the argument list, is the most
+common.
 
 Our \verb|"Hello, World!\n"| argument is what we call a "string". A string
 is a sequence of characters. At the end of the string you will see \verb|\n|.
 This means that the string should contain a line break at the end of it.
 
 We denote the end of a \ident{statement} in C with a semicolon \ident{;}.
-What exactly a \ident{statement} is will be a little vague, but it will
-become obvious as we continue.
+What exactly a \ident{statement} is will be vague for the time being, but it
+will become obvious as we continue.
 
 \section{int}
 
@@ -123,7 +123,7 @@ The answer is 42, but what is the question?
 \end{Verbatim}
 
 Since we have covered the anatomy of the \ident{main} function earlier in this
-chapter, lets skip to the two lines inside of the body of the function.
+chapter, lets skip to the two lines inside the body of the function.
 
 The first line, \verb|int again = 42;|. This line declares a new variable named
 \verb|again| of the type \verb|int|. \verb|int| is short for \verb|integer|.
@@ -173,9 +173,9 @@ initialized with the values 42 and 32 respectively. Following that, like before
 we call the function \verb|printf|. This time, there are four arguments. You can
 see that there are three \verb|%d|s used in the first argument to \verb|printf|.
 One for each of the arguments following it. The following two arguments,
-unsurprisingly, cause the values 42 and 32 to be placed into the resulting
-string. However, the last argument, \verb|a * b| performs the multiplication of
-the variables \verb|a| and \verb|b| as denoted by the multiplication operator
+unsurprisingly, cause the values 42 and 32 to be placed into the printed line.
+However, the last argument, \verb|a * b| performs the multiplication of the
+variables \verb|a| and \verb|b| as denoted by the multiplication operator
 \verb|*|. The result of this multiplication is placed in the location of the
 last \verb|%d| when printing to the screen.
 
