@@ -7,8 +7,11 @@ PDFTARGET := $(BUILDDIR)/$(NAME).pdf
 all: $(PDFTARGET)
 
 TEX_FILES :=
-TEX_FILES += book/gnome-desktop-programming.tex
 TEX_FILES += book/chapter1.tex
+TEX_FILES += book/commands.tex
+TEX_FILES += book/gnome-desktop-programming.tex
+TEX_FILES += book/introduction.tex
+TEX_FILES += book/preface.tex
 
 FIGURE_FILES :=
 EXERCISE_FILES :=
