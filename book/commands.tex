@@ -27,13 +27,16 @@
     \sffamily\footnotesize
 }
 
-\newenvironment{code}[1]
+\lstnewenvironment{code}[1]
 {
-    \begin{source}
-    \caption{\hfill\it #1}
-    \sffamily\footnotesize
+    \lstset{language=C,
+            showstringspaces=false,
+            basicstyle=\small,
+            caption=#1,
+            numbers=left,
+            basicstyle=\ttfamily}
 }
-{\end{source}}
+{}
 
 \floatstyle{ruled}
 \newfloat{note}{htpb}{lon}
