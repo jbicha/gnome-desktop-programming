@@ -17,14 +17,14 @@ Lets take a quick look at the stereotypical first program. The venerable
 "hello, world" exercise. Create a new text file with the following C code and
 save it as \file{hello.c}.
 
-\begin{Verbatim}
+\begin{code}{hello.c}
 #include <stdio.h>
 
 void main ()
 {
     printf ("Hello, World!\n");
 }
-\end{Verbatim}
+\end{code}
 
 Navigate using your terminal to the directory where you saved the file. Type in
 the following command. It will compile the program into a format that the
@@ -98,7 +98,7 @@ using our program as a base.
 
 Lets create a new text file with the following and save it as \file{answer.c}.
 
-\begin{Verbatim}
+\begin{code}{answer.c}
 #include <stdio.h>
 
 void main ()
@@ -106,7 +106,7 @@ void main ()
     int answer = 42;
     printf ("The answer is %d, but what is the question?\n", answer);
 }
-\end{Verbatim}
+\end{code}
 
 Once again, lets use \ident{gcc} to compile the program. You will get very
 used to this in no time!
@@ -148,7 +148,7 @@ Integers don't seem to be all that useful when used by themselves like this.
 Lets take a look how multiplication of integers works with an example. Type
 the following code into a new text file named \file{multiply.c}.
 
-\begin{Verbatim}
+\begin{code}{multiply.c}
 #include <stdio.h>
 
 void main ()
@@ -158,7 +158,7 @@ void main ()
 
     printf ("%d * %d = %d\n", a, b, a * b);
 }
-\end{Verbatim}
+\end{code}
 
 And, again, we compile and run it.
 
