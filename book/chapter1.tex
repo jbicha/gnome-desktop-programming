@@ -67,7 +67,7 @@ that the function will not be returning a value. Lastly, \ident{()} denotes the
 argument list for the function. Our \ident{main} function takes no arguments
 and so it has none specified\footnote[1]{This isn't technically true, but that
 will be covered in a much later chapter.}. Do not worry if this seems
-mysterious, we will cover it in great detail later on.
+mysterious, we will cover it in great detail later.
 
 After the line defining our function \ident{main}, we have a \verb|{|. This
 denotes the beginning of the body of the function. There is a coordinating
@@ -181,4 +181,36 @@ last \verb|%d| when printing to the screen.
 
 \section{Student Exercise}
 
-TODO: Explain the exercise.
+Use what you have learned in this chapter to print the multiplication of
+the numbers provided by the user. The \verb|scanf()| function is provided for
+you to receive input from the terminal. It will be covered in a later chapter.
+
+\begin{code}{student1.c}
+#include <stdio.h>
+
+void main ()
+{
+    int a;
+    int b;
+
+    printf ("Enter two numbers to multiply:  ");
+    scanf ("%d %d", &a, &b);
+
+    /* TODO: Print the multiplication of a and b. */
+}
+\end{code}
+
+When complete, the output should look like the following.
+
+\begin{Terminal}
+gcc student1.c
+./a.out
+Enter two numbers to multiply:  10 20
+10 * 20 = 200
+./a.out
+Enter two numbers to multiply:  73 81
+73 * 81 = 5913
+./a.out
+Enter two numbers to multiply:  100 0
+100 * 0 = 0
+\end{Terminal}

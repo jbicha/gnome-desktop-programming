@@ -6,5 +6,5 @@ void main ()
 
     printf ("Please enter two numbers separated by a space to multiply:  ");
     scanf ("%d %d", &a, &b);
-    return 0;
+    printf ("%d * %d = %d\n", a, b, a * b);
 }
