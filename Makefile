@@ -7,55 +7,11 @@ PDFTARGET := $(BUILDDIR)/$(NAME).pdf
 all: $(PDFTARGET)
 
 TEX_FILES :=
-TEX_FILES += book/advancedstrings.tex
-TEX_FILES += book/autotools.tex
-TEX_FILES += book/arrays.tex
-TEX_FILES += book/bitarray.tex
-TEX_FILES += book/commands.tex
-TEX_FILES += book/conditionals.tex
-TEX_FILES += book/datetime.tex
-TEX_FILES += book/debugging.tex
-TEX_FILES += book/directory.tex
-TEX_FILES += book/endianness.tex
-TEX_FILES += book/fileio.tex
-TEX_FILES += book/functions.tex
-TEX_FILES += book/fundamentals.tex
-TEX_FILES += book/garray.tex
-TEX_FILES += book/gdata.tex
-TEX_FILES += book/ghashtable.tex
-TEX_FILES += book/git.tex
-TEX_FILES += book/glist.tex
-TEX_FILES += book/gmainloop.tex
-TEX_FILES += book/gmodule.tex
 TEX_FILES += book/gnome-desktop-programming.tex
-TEX_FILES += book/gobject.tex
-TEX_FILES += book/gqueue.tex
-TEX_FILES += book/gtkdoc.tex
-TEX_FILES += book/gtree.tex
-TEX_FILES += book/introduction.tex
-TEX_FILES += book/jhbuild.tex
-TEX_FILES += book/libraries.tex
-TEX_FILES += book/memory.tex
-TEX_FILES += book/oointro.tex
-TEX_FILES += book/options.tex
-TEX_FILES += book/packing.tex
-TEX_FILES += book/pointers.tex
-TEX_FILES += book/preamble.tex
-TEX_FILES += book/preface.tex
-TEX_FILES += book/refcounting.tex
-TEX_FILES += book/scope.tex
-TEX_FILES += book/stackandheap.tex
-TEX_FILES += book/strings.tex
-TEX_FILES += book/structsenums.tex
+TEX_FILES += book/chapter1.tex
 
 FIGURE_FILES :=
-FIGURE_FILES += fundamentals1.c
-FIGURE_FILES += dateandtime1.c
-
-
 EXERCISE_FILES :=
-EXERCISE_FILES += exercise1.c
-EXERCISE_FILES += exercise2.c
 
 $(BUILDDIR)/%.tex: figures/%.c
 	@mkdir -p $(BUILDDIR)
