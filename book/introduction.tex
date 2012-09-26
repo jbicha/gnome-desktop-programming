@@ -74,32 +74,28 @@ way around their editor just fine.
 
 \subsection{Fedora 17}
 
-\begin{Verbatim}
-    $ sudo yum install gtk3-devel clutter-devel \
-      gobject-introspection-devel webkitgtk3-devel \
-      glibc-devel make automake autoconf pkg-config gedit
-\end{Verbatim}
+\begin{Terminal}
+sudo yum install gtk3-devel clutter-devel gobject-introspection-devel webkitgtk3-devel glibc-devel make automake autoconf pkg-config gedit
+\end{Terminal}
 
 
 \subsection{Ubuntu 12.04}
 
-\begin{Verbatim}
-    $ sudo apt-get install build-essential libgtk3.0-dev \
-      pkg-config gedit
-\end{Verbatim}
+\begin{Terminal}
+sudo apt-get install build-essential libgtk3.0-dev pkg-config gedit
+\end{Terminal}
 
 
 \subsection{Arch Linux}
-\begin{Verbatim}
-    $ sudo pacman -S base-devel clutter-gtk gtk gedit
-\end{Verbatim}
+\begin{Terminal}
+sudo pacman -S base-devel clutter-gtk gtk gedit
+\end{Terminal}
 
 \subsection{Debian Wheezy}
 
-\begin{Verbatim}
-    $ sudo apt-get install build-essential libgtk3.0-dev \
-      pkg-config gedit
-\end{Verbatim}
+\begin{Terminal}
+sudo apt-get install build-essential libgtk3.0-dev pkg-config gedit
+\end{Terminal}
 
 
 \section{Kicking the Tires}
@@ -110,13 +106,13 @@ We will use the \ident{pkg-config} program to check what versions of programs
 we've just installed. \ident{pkg-config} is a program that tells us information
 about various components of our installed SDK.
 
-\begin{Verbatim}
-    $ pkg-config --modversion gobject-2.0
-    2.33.14
+\begin{Terminal}
+$ pkg-config --modversion gobject-2.0
+2.33.14
 
-    $ pkg-config --modversion gtk+-3.0
-    3.5.18
-\end{Verbatim}
+$ pkg-config --modversion gtk+-3.0
+3.5.18
+\end{Terminal}
 
 If the above commands give you errors about missing packages, then you still
 need to install the development (-dev) packages for the given libraries.
