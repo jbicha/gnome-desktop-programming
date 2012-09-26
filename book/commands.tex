@@ -19,21 +19,20 @@
 { \end{quote} \end{note} }
 
 
-\newenvironment{Terminal}
+\lstnewenvironment{Terminal}
 {
-    \begin{quote}
-    \ttfamily\small
+    \lstset{basicstyle=\ttfamily,
+            breaklines=true}
 }
-{ \end{quote} }
+{}
 
 \lstnewenvironment{code}[1]
 {
     \lstset{language=C,
             showstringspaces=false,
-            basicstyle=\small,
+            basicstyle=\ttfamily\small,
             caption=#1,
-            numbers=left,
-            basicstyle=\ttfamily}
+            numbers=left}
 }
 {}
 
