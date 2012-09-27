@@ -1,0 +1,41 @@
+\chapter{Decimal Numbers}
+
+TODO: numbers with decimals
+TODO: printf with %lf
+
+\section{Student Exercise}
+
+Use what you have learned this chpater to print the division of two decimal
+numbers. Use the numbers provided in the example below to test your
+implementation. Error handling is not required in this exercise. Chapter 1 used
+\verb|%d| inside of the call to \verb|printf|. In this exercise, use \verb|%lf|
+instead.
+
+\begin{code}{student2.c}
+#include <stdio.h>
+
+void main ()
+{
+    double a;
+    double b;
+
+    printf ("Enter two decimal numbers to multiply: ");
+    scanf ("%lf %lf", &a, &b);
+
+    /* TODO: Print the division of a and b. */
+}
+\end{code}
+
+When complete, the output should look like the following.
+
+\begin{Terminal}
+gcc student2.c
+./a.out
+Enter two decimal numbers to multiply: 12.3 45.6
+12.3 / 45.6 = 0.269737
+\end{Terminal}
+
+\subsection{Extra Credit}
+
+Some division is simply not possible. What possible input could a user provide
+that would result in this problem?
