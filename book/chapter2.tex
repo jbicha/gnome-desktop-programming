@@ -1,7 +1,43 @@
 \chapter{Decimal Numbers}
 
-TODO: numbers with decimals
-TODO: printf with %lf
+In the last chapter, we learned about integers. They are indeed handy, but
+provide little utility when needing to work with numbers where a decimal point
+is required.
+
+The C language provides another type to indicate we want to store numbers that
+contain a decimal point. It is called a \verb|double|\footnote{Another type
+called float also supports decimal precision. It will be covered in a later
+chapter.}.
+
+Let's take a look at a short example comparing the storage of a decimal number
+in both an \verb|integer| and a \verb|double|.
+
+\begin{code}{decimal1.c}
+#include <stdio.h>
+
+void main ()
+{
+    int a = 123.45;
+    double b = 123.45;
+
+    printf ("%d %lf\n", a, b);
+}
+\end{code}
+
+\begin{Terminal}
+gcc decimal1.c
+./a.out
+123 123.45
+\end{Terminal}
+
+
+TODO
+\begin{enumerate}
+\item numbers with decimals
+\item printf with \%lf
+\item floating point and imprecise precision
+\end{enumerate}
+
 
 \section{Student Exercise}
 
