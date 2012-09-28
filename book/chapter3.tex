@@ -1,3 +1,26 @@
 \chapter{If/Else If/Else}
 
+Any non-trivial program will use what is called a "conditional". A conditional
+is a decision. A boolean truth or falsity. Like many other languages, this is
+performed with an \verb|if| statement.
 
+Let's take a look at an example so that we may dissect it.
+
+\begin{code}{ifelse1.c}
+#include <stdio.h>
+
+void main ()
+{
+    int a = 100;
+
+    if (a == 100) {
+        printf ("%d is == 100\n", a);
+    }
+}
+\end{code}
+
+\begin{Terminal}
+gcc ifelse1.c
+./a.out
+100 is == 100
+\end{Terminal}
