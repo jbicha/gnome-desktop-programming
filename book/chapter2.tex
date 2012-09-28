@@ -10,7 +10,9 @@ called float also supports decimal precision. It will be covered in a later
 chapter.}.
 
 Let's take a look at a short example comparing the storage of a decimal number
-in both an \verb|integer| and a \verb|double|.
+in both an \verb|integer| and a \verb|double|. When using \verb|printf| with a
+\verb|double|, you use \verb|%lf| instead of \verb|%d|. We will cover this
+detail more in later chapters.
 
 \begin{code}{decimal1.c}
 #include <stdio.h>
@@ -35,12 +37,38 @@ Notice how the number \verb|123.45| stored into \verb|int a| resulted in only
 support decimal points, it prints out \verb|123.45|.
 
 
-TODO
-\begin{enumerate}
-\item numbers with decimals
-\item printf with \%lf
-\item floating point and imprecise precision
-\end{enumerate}
+\section{Floating Point}
+
+A \verb|double| cannot store every possible decimal. Imagine a number with
+one-thousand digits after the decimal point. This level of precision is not
+possible with \verb|double|. To deal with this, the \verb|double| type
+approximates the value.
+
+For example, lets look at the following example.
+
+\begin{code}{decimal2.c}
+#include <stdio.h>
+
+void main ()
+{
+    printf ("%lf\n", 123123123123.111111);
+}
+\end{code}
+
+\begin{Terminal}
+gcc decimal2.c
+./a.out
+123123123123.111115
+\end{Terminal}
+
+Notice how the number we provided (\verb|123123123123.111111|) is not what is
+printed (\verb|123123123123.111115|).  There are some cases where this can be a
+problem and so it is wise to be aware of the fact.  One such example would be
+when working with financial data for banking systems.  Imagine if your bank
+account was inacurate because it only approximated how much money you have!
+\footnote{Financial systems typically implement their financial calculations
+without using double. This is done by implementing arithmetic calculations
+without the assistence of floating point provided by the CPU.}
 
 
 \section{Student Exercise}
