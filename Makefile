@@ -12,6 +12,7 @@ TEX_FILES += book/chapter2.tex
 TEX_FILES += book/commands.tex
 TEX_FILES += book/gnome-desktop-programming.tex
 TEX_FILES += book/introduction.tex
+TEX_FILES += book/preamble.tex
 TEX_FILES += book/preface.tex
 
 FIGURE_FILES :=
