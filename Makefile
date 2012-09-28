@@ -9,6 +9,11 @@ all: $(PDFTARGET)
 TEX_FILES :=
 TEX_FILES += book/chapter1.tex
 TEX_FILES += book/chapter2.tex
+TEX_FILES += book/chapter3.tex
+TEX_FILES += book/chapter4.tex
+TEX_FILES += book/chapter5.tex
+TEX_FILES += book/chapter6.tex
+TEX_FILES += book/chapter7.tex
 TEX_FILES += book/commands.tex
 TEX_FILES += book/gnome-desktop-programming.tex
 TEX_FILES += book/introduction.tex
