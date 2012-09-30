@@ -1,11 +1,76 @@
 \chapter{If/Else If/Else}
 
-Any non-trivial program will use what is called a "conditional". A conditional
-is a decision. A boolean truth or falsity. One way to use a conditional is with
-an \verb|if| statement.
+\ident{if} blocks are an essential part of programming in any language. They
+allow you to perform a series of operations only when a certain
+\ident{condition} occurs. Let's take a look at an example and learn by
+dissecting it into its component parts.
 
-Let's take a look at an example so that we may dissect it.
+\begin{code}{ifelse1.c}
+#include <stdio.h>
 
+void main ()
+{
+    int a;
+
+    printf ("Please enter an integer between 1 and 100:  ");
+    scanf ("%d", &a);
+
+    if (a < 1) {
+        printf ("%d is less-than 1\n", a);
+    }
+
+    if (a > 100) {
+        printf ("%d is greater-than 100\n", a);
+    }
+
+    if ((a >= 1) && (a <= 100)) {
+        printf ("%d / 13 is %d\n", a, a / 13);
+    }
+}
+\end{code}
+
+The example above provides us 3 separate examples of an \ident{if} block that
+we can analyze. The first is begins on line 10, the second on line 14, and third
+on line 18.
+
+An \ident{if} block follows the following syntax\footnote{I have chosen to
+illustrate this example using curly braces. While you can perform single
+operations without curly braces, it often results in difficult to find bugs.}.
+
+\begin{Verbatim}
+if (expression) {
+    statement
+}
+\end{Verbatim}
+
+Lets apply this knowledge to determine the expression and statement of the
+\ident{if} blocks in the above example.
+
+In the first example, we have:
+
+\begin{code}{}
+if (a < 1) {
+    printf ("%d is < 1\n", a);
+}
+\end{code}
+
+In this example the expression would be \verb|a < 1| and the statement
+would be \verb|printf ("%d is < 1\n", a);|. The \verb|<| operator asks the
+question \verb|less than|. So if we were to read this expression in English,
+we might say "if \verb|a| is \verb|less than| \verb|1|".
+
+In the second example, we have:
+
+\begin{code}{}
+if (a > 100) {
+    printf ("%d is > 100\n", a);
+}
+\end{code}
+
+In this example the expression would be \verb|a > 100| and the statement
+would be \verb|printf ("%d is > 100\n", a);|. The \verb|>| operator asks
+the question \verb|greater than|. So if we were to read this expression in
+English, we might say "if \verb|a| is \verb|greater than| \verb|100|".
 
 TODO:
 
