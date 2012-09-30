@@ -72,6 +72,29 @@ would be \verb|printf ("%d is > 100\n", a);|. The \verb|>| operator asks
 the question \verb|greater than|. So if we were to read this expression in
 English, we might say "if \verb|a| is \verb|greater than| \verb|100|".
 
+In the third example, we have:
+
+\begin{code}{}
+if ((a >= 1) && (a <= 100)) {
+    printf ("%d / 13 is %d\n", a, a / 13);
+}
+\end{code}
+
+This example is much more complex than the previous two.  We have four new
+concepts in this single example. The first two are new operators, \verb|<=| and
+\verb|>=|, which mean \verb|less than or equal to| and \verb|greater than or equal to|
+respectively. Another new operator, \verb|&&|, is the boolean
+\verb|and| operator. The fourth new concept in this example is the use of
+parenthesis similar to what you may have learned in basic algebra.  Parenthesis
+can be used to make expressions more obvious to the reader as well as ensure
+what you meant is exactly what the compiler thinks you meant. Your author has
+seen many bugs that could have been easily prevented by using parenthesis
+liberally.
+
+If we were to write this expression in English, it might read like "if \verb|a|
+is greater than or equal to \verb|1|, and, \verb|a| is less than or equal to
+\verb|100|".
+
 TODO:
 
 \begin{enumerate}
