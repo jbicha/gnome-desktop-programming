@@ -1,2 +1,25 @@
 \chapter{Switch}
 
+TODO: Fill out case statements.
+
+\begin{code}{switch1.c}
+void main ()
+{
+    int a;
+
+    printf ("Please choose from the following menu:\n"
+            "  1. Add two numbers\n"
+            "  2. Multiple two numbers\n"
+            "  3. Divide two numbers\n");
+    scanf ("%d, &a);
+
+    switch (a) {
+    case 1:
+    case 2:
+    case 3:
+        break;
+    default:
+        printf ("%d is not a valid choice.", a);
+    }
+}
+\end{code}
