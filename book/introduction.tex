@@ -121,3 +121,47 @@ $ pkg-config --modversion gtk+-3.0
 
 If the above commands give you errors about missing packages, then you still
 need to install the development (-dev) packages for the given libraries.
+
+Your author remembers how rewarding it was to see his first Gtk window display
+on the screen. To share that feeling with you, we will start with a very
+ambitious first program. You likely wont know what the various parts of the
+following code is, but we will get to that in the following chapters. This
+example is about getting a taste of the future!
+
+Create a new text file named \file{hellogtk.c} containing the following code.
+Ignore the line numbers on the left of the margin.
+
+\begin{code}{hellogtk.c}
+#include <gtk/gtk.h>
+
+gint
+main (gint   argc,
+      gchar *argv[])
+{
+    GtkWidget *label;
+    GtkWidget *window;
+
+    gtk_init (&argc, &argv);
+
+    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+    label = gtk_label_new ("Hello, Gtk World!");
+    gtk_container_add (GTK_CONTAINER (window), label);
+    gtk_widget_show (label);
+    g_signal_connect (window, "delete-event", gtk_main_quit, NULL);
+    gtk_window_present (GTK_WINDOW (window));
+
+    gtk_main ();
+
+    return 0;
+}
+\end{code}
+
+Navigate using your terminal to the directory containing the file you just
+created and run the following commands.
+
+\begin{Terminal}
+gcc hellogtk.c $(pkg-config --cflags --libs gtk+-3.0)
+./a.out
+\end{Terminal}
+
+Congratulations on your first Gtk+ program!
