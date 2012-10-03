@@ -180,6 +180,106 @@ variables \verb|a| and \verb|b| as denoted by the multiplication operator
 \verb|*|. The result of this multiplication is placed in the location of the
 last \verb|%d| when printing to the screen.
 
+\section{Addition, Subtraction, Division and Modulus}
+
+Multiplication might have been obvious. How about we take a look at a few other
+arithmetic operators. See table 1.1 for the list of arithmetic operators.
+Operators always follow the \verb|left operator right| pattern. The operator
+operates on a value to the left and a value to the right.
+
+So for the multiplication example above, that would be:
+
+\begin{center}
+\begin{tabular}{r c l}
+left & operator & right \\
+\verb|a| & \verb|*| & \verb|b| \\
+\end{tabular}
+\end{center}
+
+As you can imagine, we can simply substitute the multiplication \verb|*|
+operator out for one of the others. The table below gives you our available
+arithmetic operators.
+
+\begin{center}
+\begin{tabular}{r l}
+\hline
+\verb|+| & Addition of two numbers \verb|(a + b)| \\
+\verb|-| & Subtraction of two numbers \verb|(a - b)| \\
+\verb|*| & Multiplication of two numbers \verb|(a * b)| \\
+\verb|/| & Division of two numbers \verb|(a / b)| \\
+\verb|%| & Modulus (remainder) of integer division \verb|(a % b)| \\
+\hline
+\end{tabular}
+\end{center}
+
+Lets modify the code above to perform division and save it into a new file
+called \file{divide.c}.
+
+\begin{code}{divide.c}
+#include <stdio.h>
+
+void main ()
+{
+    int a = 221;
+    int b = 13;
+
+    printf ("%d / %d = %d\n", a, b, a / b);
+}
+\end{code}
+
+Now we compile \file{divide.c} and run it (you'll see a pattern here).
+
+\begin{Terminal}
+gcc divide.c
+./a.out
+221 / 13 = 17
+\end{Terminal}
+
+Simple, right?
+
+Now I don't think we need to do this for addition and subtraction, but how about
+modulus? The modulus \verb|%| operator divides the \verb|left| by the
+\verb|right| and returns the remainder. So if we performed the following
+division using normal algebra, we would get a fractional result.
+
+\begin{center}
+\begin{math}
+10 / 3 = 3.3333...
+\end{math}
+\end{center}
+
+However, what modulus does is try to divide the number as many times as it can
+and then return the remainder. Those that have performed division the "long way"
+will understand this as the same remainder. So if we were to perform the
+modulus, we would get the following.
+
+\begin{center}
+\verb|10 % 3 = 10 - 3 - 3 - 3 = 1|
+\end{center}
+
+Just to verify our logic, lets modify the previous example in a new file
+called \file{modulus.c}.
+
+\begin{code}{modulus.c}
+#include <stdio.h>
+
+void main ()
+{
+    int a = 42;
+    int b = 32;
+
+    printf ("%d % %d = %d\n", a, b, a % b);
+}
+\end{code}
+
+Now we compile \file{modulus.c} and run it.
+
+\begin{Terminal}
+gcc modulus.c
+./a.out
+42 % 32 = 10
+\end{Terminal}
+
 \section{Student Exercise}
 
 Use what you have learned in this chapter to print the multiplication of
