@@ -1,21 +1,24 @@
 \chapter{The Basics}
 
-The C programming language often seems complex and mysterious to those who have
-not yet been emersed. Many of us have heard horror stories about how difficult
-pointers can be. While it is indeed a difficult subject, it is perfectly within
-your reach.
+The C programming language may seem complex or mysterious.  Many have heard
+horror stories about how difficult pointers can be. While it is indeed a
+difficult subject, it is perfectly within your reach.  This chapter will
+familiarize you with the basics of C.  You will write your first C program and
+learn to express yourself in this unfamiliar language.
 
-The focus of this chapter is to familiarize yourself with the very basics of
-the language. You will write your first C program and we will reason how to
-express ourselves in this unfamiliar place.
+Occasionally, we will gloss over some details to focus the area of learning.
+Future chapters may feel repetitious as we reinforce previous teachings in the
+light of new understanding.
 
-Occasionally, we will gloss over certain details so that we can broaden our
-understanding. Future chapters may feel repetitious as we reinforce previous
-teachings in the light of new understanding.
+\section{Hello, World!}
 
-Lets take a quick look at the stereotypical first program. The venerable
-"hello world" exercise. Create a new text file with the following C code and
-save it as \file{hello.c}.
+In the example below you will see the first program that everyone writes in C.
+If you've learned another programming language then you've probably written
+something similar.
+
+Create a new text file containing the following C code and save it as
+\file{hello.c}.  The line numbers to the left of the margin are for readability
+within this book and are not to be copied.
 
 \begin{code}{hello.c}
 #include <stdio.h>
@@ -26,21 +29,23 @@ main ()
 }
 \end{code}
 
-Navigate using your terminal to the directory where you saved the file. Type in
-the following command. It will compile the program into a format that the
-computer knows how to execute.
+Navigate with your terminal to the directory containing \file{hello.c}. Type in
+the following command. It will instruct the program called \file{cc} (the C
+Compiler) to translate your source code into machine code. The resulting
+machine code is what can be executed by your computer.
 
 \begin{Terminal}
-gcc hello.c
+cc hello.c
 \end{Terminal}
 
-If everything worked, the \ident{gcc} command will exit silently and a new
-executable file \file{a.out} will be found in your current directory. If there
-was an error, carefully check that each character in \file{hello.c} matches the
-C code above and try again.
+If everything worked, the \file{cc} command will exit silently and a new
+executable file named \file{a.out} will have been placed in your current
+directory. If instead there was an error, carefully check that each character in
+\file{hello.c} matches the C code above and try again.
 
-We can execute the program from the terminal by prefixing \verb|./| to the
-filename to tell the terminal to execute a file within the current directory.
+Once you have successfully compiled \file{hello.c}, we can execute the program
+from the terminal by prefixing \verb|./| to the filename to tell the terminal
+to execute a file within the current directory.
 
 \begin{Terminal}
 ./a.out
@@ -51,26 +56,28 @@ There you have it, your very first C program!
 
 Lets now analyze the anatomy of this simple C program. The very first line,
 \verb|#include <stdio.h>| tells the compiler that we would like to use the
-\ident{stdio} library. A library is a set of useful, reusable routines. In this
-case, the \ident{stdio} library contains routines for interfacing with standard
-input and output. Run \verb|man stdio| in your terminal for more information on
-the \ident{stdio} library.
+\ident{stdio} library. A \textbf{library} is a set of useful, reusable
+routines. In this case, the \ident{stdio} library contains routines to
+interface with the standard input and output of your terminal\footnote{Run
+\ttfamily{man stdio} \rmfamily in your terminal for more information on the
+stdio library.}.  This allows your program to output text to the terminal and
+input text from it.
 
-The line following our include is simply an empty line. Empty lines do not
-effect the program. In some languages, this does matter. However, C is not one
-of those languages. You may use empty lines liberally to make your code more
-readable.
+The line following \verb|#include| is simply an empty line. Empty lines do
+not affect the program. In some languages, this does matter. However, C is not
+one of those languages. You may use empty lines liberally to make your code
+more readable.
 
-Next, we have \verb|main ()|. This line tells the compiler that we have a
-function named \verb|main|. The \verb|main| function is the beginning of the
-program. Every program has one. Lastly, \verb|()| denotes the argument list for
-the function. Our \verb|main| function takes no arguments and so it has none
-specified\footnote[1]{This isn't technically true, but that will be covered in
-a much later chapter.}. Do not worry if this seems mysterious, we will cover it
-in great detail later.
+Next, we have \verb|main ()|. This tells the compiler that we have a function
+named \verb|main|. The \verb|main| function is the beginning of the program.
+Every program has one. Lastly, \verb|()| denotes the argument list for the
+function. Our \verb|main| function takes no arguments and so it has none
+specified\footnote{This isn't technically true, but that will be covered in a
+later chapter.}. Do not worry if this seems mysterious, we will cover it
+in detail in a later chapter.
 
 After the line defining our function \ident{main}, we have a \verb|{|. This
-denotes the beginning of the body of the function. There is a coordinating
+denotes the beginning of the body of the function. There is a corresponding
 \verb|}| at the end of the function. Inside of these curly braces is the crux
 of our program.
 
@@ -83,12 +90,12 @@ a couple different ways. This way, through the argument list, is the most
 common.
 
 Our \verb|"Hello, World!\n"| argument is what we call a "string". A string
-is a sequence of characters. At the end of the string you will see \verb|\n|.
+is a sequence of characters. At the end of this string you will see \verb|\n|.
 This means that the string should contain a line break at the end of it.
 
-We denote the end of a \ident{statement} in C with a semicolon \ident{;}.
-What exactly a \ident{statement} is will be vague for the time being, but it
-will become obvious as we continue.
+We denote the end of a \ident{statement} in C with a semicolon \ident{;}.  What
+exactly a \ident{statement} is will be vague for now, but it will become
+clear as we continue.
 
 \section{Integers}
 
