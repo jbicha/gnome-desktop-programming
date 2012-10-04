@@ -20,7 +20,7 @@ save it as \file{hello.c}.
 \begin{code}{hello.c}
 #include <stdio.h>
 
-void main ()
+main ()
 {
     printf ("Hello, World!\n");
 }
@@ -61,13 +61,13 @@ effect the program. In some languages, this does matter. However, C is not one
 of those languages. You may use empty lines liberally to make your code more
 readable.
 
-Next, we have \verb|void main ()|. This line tells the compiler that we have a
-function named \ident{main}. The first word, \ident{void} tells the compiler
-that the function will not be returning a value. Lastly, \ident{()} denotes the
-argument list for the function. Our \ident{main} function takes no arguments
-and so it has none specified\footnote[1]{This isn't technically true, but that
-will be covered in a much later chapter.}. Do not worry if this seems
-mysterious, we will cover it in great detail later.
+Next, we have \verb|main ()|. This line tells the compiler that we have a
+function named \verb|main|. The \verb|main| function is the beginning of the
+program. Every program has one. Lastly, \verb|()| denotes the argument list for
+the function. Our \verb|main| function takes no arguments and so it has none
+specified\footnote[1]{This isn't technically true, but that will be covered in
+a much later chapter.}. Do not worry if this seems mysterious, we will cover it
+in great detail later.
 
 After the line defining our function \ident{main}, we have a \verb|{|. This
 denotes the beginning of the body of the function. There is a coordinating
@@ -101,7 +101,7 @@ Lets create a new text file with the following and save it as \file{answer.c}.
 \begin{code}{answer.c}
 #include <stdio.h>
 
-void main ()
+main ()
 {
     int answer = 42;
     printf ("The answer is %d, but what is the question?\n", answer);
@@ -152,7 +152,7 @@ the following code into a new text file named \file{multiply.c}.
 \begin{code}{multiply.c}
 #include <stdio.h>
 
-void main ()
+main ()
 {
     int a = 42;
     int b = 32;
@@ -218,7 +218,7 @@ called \file{divide.c}.
 \begin{code}{divide.c}
 #include <stdio.h>
 
-void main ()
+main ()
 {
     int a = 221;
     int b = 13;
@@ -263,7 +263,7 @@ called \file{modulus.c}.
 \begin{code}{modulus.c}
 #include <stdio.h>
 
-void main ()
+main ()
 {
     int a = 42;
     int b = 32;
@@ -289,7 +289,7 @@ you to receive input from the terminal. It will be covered in a later chapter.
 \begin{code}{student1.c}
 #include <stdio.h>
 
-void main ()
+main ()
 {
     int a;
     int b;
